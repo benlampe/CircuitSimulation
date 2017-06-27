@@ -1,0 +1,21 @@
+Cascode BJT Amplifier
+Vcc N9 0 DC 15
+Vg N8 0 AC 1
+r1 N2 N9 18K
+r2 N1 N2 4K
+r3 N1 0 8K
+rs N7 N8 4K
+re N3 0 3.3K
+rc N5 N9 6K
+rl N6 0 4K
+cc1 N1 N7 1uF
+cc2 N5 N6 1uF
+ce N3 0 10uF
+cb N2 0 10uF
+q1 N4 N1 N3 qmod
+q2 N5 N2 N4 qmod
+.model qmod npn (CJE=4.5pF TF=3e-10 CJC=3.6pF TR=2.4e-7)
+.control
+ac dec 10 10 1e8
+.endc
+.end

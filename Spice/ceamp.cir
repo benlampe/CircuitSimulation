@@ -1,0 +1,18 @@
+Common Emitter Amplifier
+vcc n7 0 dc 12
+vg n1 0 ac 1
+r1 n3 n7 8k
+r2 n3 0 4k
+rs n1 n2 4k
+re n4 0 3.3k
+rc n5 n7 6k
+rl n6 0 4k
+cc1 n2 n3 1uF
+cc2 n5 n6 1uF
+ce n4 0 10uF
+q1 n5 n3 n4 qmod
+.model qmod npn (CJE=4.5pF TF=3e-10 CJC=3.6pF TR=2.4e-7)
+.control
+ac dec 10 10 1e8
+.endc
+.end
