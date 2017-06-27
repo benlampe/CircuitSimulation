@@ -1,0 +1,4 @@
+Circuit: * \\samba1\blampe\dcengr\Desktop\ELEN118\Project2\schem.asc
+
+Fatal Error: Unknown subcircuit called in:
+   xu1 n001 n008 n003 opamp aol=100k gbw=10meg
